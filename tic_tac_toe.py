@@ -29,6 +29,8 @@ def who_goes_first():
 
     # This function should randomly choose whether the x's or the o's go
     # first.
+    import random
+    return  random.choice(['x', 'o'])
 
 
 def get_player_move(board, player_token):
