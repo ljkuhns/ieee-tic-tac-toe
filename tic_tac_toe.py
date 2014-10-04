@@ -69,11 +69,15 @@ def is_there_a_win(board):
 def get_play_again():
     """Returns True or False based on the player's input of whether they
     want to play again."""
-
     # Make use of raw_input to ask the player whether they want to play
     # again.
-
-
+    name = raw_input('Do you want to play again. Type "Yes" or "No" and hit enter\n')
+    
+    if name == 'Yes' or 'yes':
+        return True
+    elif name == 'No' or 'no':
+        return False
+    
 def is_board_full(board):
     """Returns True or False to determine if the board is full or not."""
 
@@ -86,7 +90,6 @@ def main():
     # main() should implement a while loop that runs through the game
     # sequence, it should end on a win or a draw (full board), and should
     # start over if the player wants to play again.
-
     # This code should make use of all the above functions as much as
     # possible. You will not be able to test the main program until all the
     # other functions are implemented by the other pairs.
