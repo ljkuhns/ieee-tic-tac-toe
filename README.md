@@ -1,5 +1,6 @@
 Introduction
 ============
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ljkuhns/ieee-tic-tac-toe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Welcome to the CSU IEEE Tic-Tac-Toe Repository!
 
