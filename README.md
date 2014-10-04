@@ -119,8 +119,14 @@ can merge the pull request into the main repository.
 Getting changes other people made to the repository
 ---------------------------------------------------
 
-First make sure you are on the master branch. We will use the master branch of
-your fork on your computer to manage pull in changes from the main repository.
+First make sure you commit your changes on`my_branch`.
+
+```bash
+$ git commit <filename> -m "<type a message>"
+```
+
+Now change back to the master branch. We will use the master branch of your
+fork on your computer to manage pull in changes from the main repository.
 
 ```bash
 $ git checkout master
@@ -138,8 +144,18 @@ Now you can use the ``git pull`` command to bring down the changes:
 ```bash
 $ git pull main_repo master
 ```
-
 This will make the master branch on your computer reflect the master branch on
-the main repository on Github. You should do this periodically to get the
-changes from your pull requests and from other pull requests. At some point,
-once all the functions are done, you will have a working tic-tac-toe game!
+the main repository on Github. Now return to the branch with your changes and
+merge in the new changes you pulled from the main repository:
+
+```bash
+$ git checkout my_branch
+$ git merge master
+```
+
+And continue editing your files, but now with other people's new functionality
+enabled.
+
+You should do this periodically to get the changes from your pull requests and
+from other pull requests. At some point, once all the functions are done, you
+will have a working tic-tac-toe game!
