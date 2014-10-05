@@ -71,12 +71,19 @@ def get_play_again():
     want to play again."""
     # Make use of raw_input to ask the player whether they want to play
     # again.
-    name = raw_input('Do you want to play again. Type "Yes" or "No" and hit enter\n')
-    
-    if name == 'Yes' or 'yes':
-        return True
-    elif name == 'No' or 'no':
-        return False
+    while True :
+        playchoice = raw_input('Do you want to play again? Type "Yes" or "No" and hit enter\n')
+        if playchoice == 'yes' or playchoice == 'Yes':
+            import random
+            print random.choice(["Ok let's go for another round!\n", "Good choice!\n"])
+            return True
+            break     
+        elif playchoice == 'No' or playchoice == 'no':
+            print("Thank you for playing! Come back again!\n")
+            return False
+            break
+        else:
+            print("I'm sorry. I don't understand that.\n")
     
 def is_board_full(board):
     """Returns True or False to determine if the board is full or not."""
