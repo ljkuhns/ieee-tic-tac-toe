@@ -4,7 +4,7 @@
 # For example:
 #
 # import random
-
+import random
 
 def print_board(board):
     """Returns a single string containing a visual representation of the
@@ -22,14 +22,21 @@ def get_player_token_choice():
     # This function should make use of raw_input to ask the player what
     # token they'd like to use. The only valid tokens are 'x' and 'o', so
     # make sure to handle other inputs gracefully.
-
-
+    while True :
+        tokenchoice = raw_input('Which icon would you like to use? Enter "x" or "o" and press enter: ')
+        if tokenchoice == 'x' or tokenchoice == 'X':
+            print('Ok you are playing with "x"')
+            return 'x'
+        elif tokenchoice == 'o' or tokenchoice =='O':
+            print('Ok you are playing with "o"')
+            return 'o'
+        else:
+            print("I'm sorry. I don't understand that. Please try again\n")
 def who_goes_first():
     """Returns either the string 'x' or 'o'."""
 
     # This function should randomly choose whether the x's or the o's go
     # first.
-    import random
     return  random.choice(['x', 'o'])
 
 
@@ -72,16 +79,13 @@ def get_play_again():
     # Make use of raw_input to ask the player whether they want to play
     # again.
     while True :
-        playchoice = raw_input('Do you want to play again? Type "Yes" or "No" and hit enter\n')
+        playchoice = raw_input('Do you want to play again? Type "Yes" or "No" and hit enter: \n')
         if playchoice == 'yes' or playchoice == 'Yes':
-            import random
             print random.choice(["Ok let's go for another round!\n", "Good choice!\n"])
             return True
-            break     
         elif playchoice == 'No' or playchoice == 'no':
             print("Thank you for playing! Come back again!\n")
             return False
-            break
         else:
             print("I'm sorry. I don't understand that.\n")
     
